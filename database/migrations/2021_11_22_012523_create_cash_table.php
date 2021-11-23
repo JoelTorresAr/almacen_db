@@ -20,7 +20,6 @@ class CreateCashTable extends Migration
             $table->datetime('dateclosing');
             $table->float('amountopening');
             $table->float('amountclosing');
-            $table->boolean('amountclosing');
             $table->boolean('state');
         });
     }

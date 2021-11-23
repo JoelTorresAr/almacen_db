@@ -18,7 +18,7 @@ class CreateWarehouseTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('idcompany');
             $table->boolean('state');
-            $table->foreign('idcompany')->on('id')->references('company');
+            $table->foreign('idcompany')->references('id')->on('company');
         });
     }
 

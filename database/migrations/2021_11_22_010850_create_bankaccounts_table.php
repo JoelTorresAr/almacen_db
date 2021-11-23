@@ -22,7 +22,7 @@ class CreateBankaccountsTable extends Migration
             $table->boolean('state');
             $table->unsignedBigInteger('idpaymentmethods');
 
-            $table->foreign('idpaymentmethods')->on('id')->references('paymentmethods');
+            $table->foreign('idpaymentmethods')->references('id')->on('paymentmethods');
         });
     }
 

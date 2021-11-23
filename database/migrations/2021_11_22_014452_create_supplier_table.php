@@ -31,7 +31,7 @@ class CreateSupplierTable extends Migration
             $table->datetime('delete');
             $table->unsignedBigInteger('iddocumenttype');
 
-            $table->foreign('iddocumenttype')->on('id')->references('documenttype');
+            $table->foreign('iddocumenttype')->references('id')->on('documenttype');
         });
     }
 

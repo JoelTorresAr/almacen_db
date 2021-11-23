@@ -17,13 +17,21 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('number',20);
             $table->string('fullname');
-            $table->string('country');
+            $table->string('country',5);
             $table->string('ubigeo');
             $table->string('address');
             $table->string('condition',10);
+            $table->string('status',10);
+            $table->string('mail');
+            $table->boolean('state');
+            $table->string('telephone',20);
             $table->datetime('created');
             $table->datetime('update');
             $table->datetime('delete');
+            $table->float('totalpurchase');
+            $table->unsignedBigInteger('iddocumenttype');
+
+            $table->foreign('iddocumenttype')->references('id')->on('documenttype');
         });
     }
 
